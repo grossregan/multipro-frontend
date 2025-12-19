@@ -1,14 +1,19 @@
 .c-item {
-    height: 480px;
+    height: 575px;
 }
 
 .c-img {
     height: 100%;
     object-fit: cover;
+    filter: brightness(.45);
 }
 
 
 .caption {
-    color: black;
+    color: whitesmoke;
     font-size: 150%;
+    position: absolute;
+    transform: translate(0%, 25%);
+    text-align: center;
+    white-space: nowrap;
 }
