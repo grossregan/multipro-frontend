@@ -12,8 +12,5 @@
 .caption {
     color: whitesmoke;
     font-size: 150%;
-    position: absolute;
     transform: translate(0%, 25%);
-    text-align: center;
-    white-space: nowrap;
 }

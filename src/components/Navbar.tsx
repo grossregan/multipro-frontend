@@ -23,30 +23,18 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ">
               <li className="nav-item dropdown">
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
+                <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Services
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <a className="dropdown-item" href="#">
-                      Repairs
-                    </a>
+                    <a className="dropdown-item" href="#">Repairs</a>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
-                      Preventative Maintenance
-                    </a>
+                    <a className="dropdown-item" href="#">Preventative Maintenance</a>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
-                      Unit Turns & Make-Readies
-                    </a>
+                    <a className="dropdown-item" href="#">Unit Turns & Make-Readies</a>
                   </li>
                   <li>
                     <a className="dropdown-item" href="#">

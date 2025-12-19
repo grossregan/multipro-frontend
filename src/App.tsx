@@ -5,9 +5,11 @@ const App = () => {
   return (
     <>
       <div>
-        <Navbar /> 
+        <Navbar />
       </div>
-      <Carousel />
+      <div>
+        <Carousel />
+      </div>
     </>
   );
 };
