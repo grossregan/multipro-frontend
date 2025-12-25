@@ -1,4 +1,5 @@
 //import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -6,9 +7,9 @@ const Navbar = () => {
     <div className="container nav-container">
       <nav id="main navbar" className="navbar fixed-top navbar-expand-lg mt-2">
         <div className="container-fluid">
-          <a className="navbar-brand me-5" href="#">
+          <Link className="navbar-brand me-5" to='root'>
             Multipro
-          </a>
+          </Link>
           <button
             className="navbar-toggler toggler"
             type="button"
@@ -28,26 +29,26 @@ const Navbar = () => {
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <a className="dropdown-item" href="#">Repairs</a>
+                    <Link className="dropdown-item" to="repairs">Repairs</Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">Preventative Maintenance</a>
+                    <Link className="dropdown-item" to="pm">Preventative Maintenance</Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">Unit Turns & Make-Readies</a>
+                    <Link className="dropdown-item" to="#utmr">Unit Turns & Make-Readies</Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <Link className="dropdown-item" to="tir#">
                       Tenant Improvements & Renovations
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <a className="dropdown-item" href="caem">
                       Common Area & Eexterior Maintenance
                     </a>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <a className="dropdown-item" href="ims">
                       Interim Maintenance Staffing
                     </a>
                   </li>

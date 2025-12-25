@@ -1,16 +1,9 @@
-import Navbar from "./components/Navbar";
-import Carousel from "./components/Carousel";
-
+import Home from "./Home";
 const App = () => {
   return (
-    <>
-      <div>
-        <Navbar />
-      </div>
-      <div>
-        <Carousel />
-      </div>
-    </>
+    <div>
+      <Home />
+    </div>
   );
 };
 
