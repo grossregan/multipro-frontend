@@ -7,7 +7,7 @@ const Navbar = () => {
     <div className="container nav-container">
       <nav id="main navbar" className="navbar fixed-top navbar-expand-lg mt-2">
         <div className="container-fluid">
-          <Link className="navbar-brand me-5" to='root'>
+          <Link className="navbar-brand nav-item me-5" to='root'>
             Multipro
           </Link>
           <button
