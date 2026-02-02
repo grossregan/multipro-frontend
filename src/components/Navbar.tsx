@@ -29,6 +29,11 @@ const Navbar = () => {
                 </a>
                 <ul className="dropdown-menu">
                   <li>
+                    <a className="dropdown-item" href="ims">
+                      Interim Maintenance Staffing
+                    </a>
+                  </li>
+                  <li>
                     <Link className="dropdown-item" to="repairs">Repairs</Link>
                   </li>
                   <li>
@@ -44,12 +49,7 @@ const Navbar = () => {
                   </li>
                   <li>
                     <a className="dropdown-item" href="caem">
-                      Common Area & Eexterior Maintenance
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="ims">
-                      Interim Maintenance Staffing
+                      Common Area & Exterior Maintenance
                     </a>
                   </li>
                 </ul>
