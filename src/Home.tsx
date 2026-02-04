@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import Carousel from "./components/Carousel";
 import MaintenancePage from "./MaintenancePage";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import "./Home.css";
 
 const Home = () => {
   return (
@@ -19,6 +20,14 @@ const Home = () => {
           </Routes>
           <Carousel />
         </Router>
+      </div>
+      <div>
+        <div className="container-fluid text-center">
+          <div className="row r-color">
+                <text>Here at Multipro, we do it all! Everything from interim staffing to unit turnovers.</text>
+                <strong>We are on your side!</strong>
+          </div>
+        </div>
       </div>
     </>
   );
