@@ -22,10 +22,15 @@ const Home = () => {
         </Router>
       </div>
       <div>
-        <div className="container-fluid text-center">
+        <div className="container-fluid text-center t-size">
           <div className="row r-color">
-                <text>Here at Multipro, we do it all! Everything from interim staffing to unit turnovers.</text>
+            <div className="pad">
+              <text>
+                Here at Multipro, we do it all! Everything from interim staffing
+                to unit turnovers. <br></br>
                 <strong>We are on your side!</strong>
+              </text>
+            </div>
           </div>
         </div>
       </div>
