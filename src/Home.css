@@ -5,5 +5,15 @@
     font-size: 15pt;
 }
 .pad{
-    margin: 5px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.grid{
+    border: 1px solid black; 
+    padding: 10px; 
+    box-sizing: border-box; 
+    font-family: Copperplate;
+    font-weight: bolder;
+    font-size: 13pt;
+    color: #7d393b;
 }
