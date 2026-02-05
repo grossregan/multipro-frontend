@@ -1,8 +1,3 @@
-import Navbar from "./components/Navbar";
-import Carousel from "./components/Carousel";
-import MaintenancePage from "./MaintenancePage";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import "./Home.css";
 import Apartment from "./assets/apartment.jpeg";
 import Retail from "./assets/retail.webp";
 import Hoa from "./assets/hoaHomes.webp";
@@ -10,22 +5,29 @@ import PropertyManager from "./assets/propertyManager.webp";
 import SeniorLiving from "./assets/assistedLiving.webp";
 import Warehouse from "./assets/warehouse.webp";
 
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
+import Navbar from "./components/Navbar";
+import Carousel from "./components/Carousel";
+import MaintenancePage from "./MaintenancePage";
+import "./Home.css";
+
+
 interface CardDetails {
   industry: string;
-  imgSource: string;
+  img: string;
 }
 
 function gridCard(details: CardDetails) {
   return (
     <div className="card">
-      <img src={details.imgSource} className="card-img-top" alt="" />
+      <img src={details.img} className="card-img-top" alt="" />
       <div className="card-body p-3 grid">
         <h5 className="card-title">{details.industry}</h5>
       </div>
     </div>
   );
 }
-
 
 const Home = () => {
   return (
@@ -74,22 +76,37 @@ const Home = () => {
       <div className="container text-center">
         <div className="row row-cols-3 gx-5 gy-5">
           <div className="col">
-            {gridCard({industry: "Multi-Family & Apartment Communities", imgSource: Apartment})}
+            {gridCard({
+              industry: "Multi-Family & Apartment Communities",
+              img: Apartment,
+            })}
           </div>
           <div className="col">
-            {gridCard({industry: "Commercial & Retail Properties", imgSource: Retail})}
+            {gridCard({
+              industry: "Commercial & Retail Properties",
+              img: Retail,
+            })}
           </div>
           <div className="col">
-            {gridCard({industry: "HOA & Condo Associations", imgSource: Hoa})}
+            {gridCard({ industry: "HOA & Condo Associations", img: Hoa })}
           </div>
           <div className="col">
-            {gridCard({industry: "Property Management Companies", imgSource: PropertyManager})}
+            {gridCard({
+              industry: "Property Management Companies",
+              img: PropertyManager,
+            })}
           </div>
           <div className="col">
-            {gridCard({industry: "Senior Living & Assisted Living Communities", imgSource: SeniorLiving})}
+            {gridCard({
+              industry: "Senior Living & Assisted Living Communities",
+              img: SeniorLiving,
+            })}
           </div>
           <div className="col">
-            {gridCard({industry: "Industrial & Warehouse Facilities", imgSource: Warehouse})}
+            {gridCard({
+              industry: "Industrial & Warehouse Facilities",
+              img: Warehouse,
+            })}
           </div>
         </div>
       </div>
