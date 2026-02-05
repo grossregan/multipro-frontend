@@ -10,6 +10,23 @@ import PropertyManager from "./assets/propertyManager.webp";
 import SeniorLiving from "./assets/assistedLiving.webp";
 import Warehouse from "./assets/warehouse.webp";
 
+interface CardDetails {
+  industry: string;
+  imgSource: string;
+}
+
+function gridCard(details: CardDetails) {
+  return (
+    <div className="card">
+      <img src={details.imgSource} className="card-img-top" alt="" />
+      <div className="card-body p-3 grid">
+        <h5 className="card-title">{details.industry}</h5>
+      </div>
+    </div>
+  );
+}
+
+
 const Home = () => {
   return (
     <>
@@ -57,58 +74,22 @@ const Home = () => {
       <div className="container text-center">
         <div className="row row-cols-3 gx-5 gy-5">
           <div className="col">
-            <div className="card">
-              <img src={Apartment} className="card-img-top" alt="" />
-              <div className="card-body p-3 grid">
-                <h5 className="card-title">
-                  Multi-Family & Apartment Communities
-                </h5>
-              </div>
-            </div>
+            {gridCard({industry: "Multi-Family & Apartment Communities", imgSource: Apartment})}
           </div>
           <div className="col">
-            <div className="card">
-              <img src={Retail} className="card-img-top" alt="" />
-              <div className="card-body p-3 grid">
-                <h5 className="card-title">Commercial & Retail Properties </h5>
-              </div>
-            </div>
+            {gridCard({industry: "Commercial & Retail Properties", imgSource: Retail})}
           </div>
           <div className="col">
-            <div className="card">
-              <img src={Hoa} className="card-img-top" alt="" />
-              <div className="card-body p-3 grid">
-                <h5 className="card-title">HOA & Condo Associations</h5>
-              </div>
-            </div>
+            {gridCard({industry: "HOA & Condo Associations", imgSource: Hoa})}
           </div>
           <div className="col">
-            <div className="card">
-              <img src={PropertyManager} className="card-img-top" alt="" />
-              <div className="card-body p-3 grid">
-                <h5 className="card-title">Property Management Companies</h5>
-              </div>
-            </div>
+            {gridCard({industry: "Property Management Companies", imgSource: PropertyManager})}
           </div>
           <div className="col">
-            <div className="card">
-              <img src={SeniorLiving} className="card-img-top" alt="" />
-              <div className="card-body p-3 grid">
-                <h5 className="card-title">
-                  Senior Living & Assisted Living Communities
-                </h5>
-              </div>
-            </div>
+            {gridCard({industry: "Senior Living & Assisted Living Communities", imgSource: SeniorLiving})}
           </div>
           <div className="col">
-            <div className="card">
-              <img src={Warehouse} className="card-img-top" alt="" />
-              <div className="card-body p-3 grid">
-                <h5 className="card-title">
-                 Industrial & Warehouse Facilities
-                </h5>
-              </div>
-            </div>
+            {gridCard({industry: "Industrial & Warehouse Facilities", imgSource: Warehouse})}
           </div>
         </div>
       </div>
