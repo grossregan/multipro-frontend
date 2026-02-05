@@ -3,6 +3,12 @@ import Carousel from "./components/Carousel";
 import MaintenancePage from "./MaintenancePage";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./Home.css";
+import Apartment from "./assets/apartment.jpeg";
+import Retail from "./assets/retail.webp";
+import Hoa from "./assets/hoaHomes.webp";
+import PropertyManager from "./assets/propertyManager.webp";
+import SeniorLiving from "./assets/assistedLiving.webp";
+import Warehouse from "./assets/warehouse.webp";
 
 const Home = () => {
   return (
@@ -48,27 +54,61 @@ const Home = () => {
           </strong>
         </div>
       </div>
-      <div className="container px-4 text-center">
+      <div className="container text-center">
         <div className="row row-cols-3 gx-5 gy-5">
           <div className="col">
-            <div className="p-3 grid">Multi-Family & Apartment Communities</div>
-          </div>
-          <div className="col">
-            <div className="p-3 grid">Commercial & Retail Properties</div>
-          </div>
-          <div className="col">
-            <div className="p-3 grid">HOA & Condo Associations</div>
-          </div>
-          <div className="col">
-            <div className="p-3 grid">Property Management Companies</div>
-          </div>
-          <div className="col">
-            <div className="p-3 grid">
-              Senior Living & Assisted Living Communities
+            <div className="card">
+              <img src={Apartment} className="card-img-top" alt="" />
+              <div className="card-body p-3 grid">
+                <h5 className="card-title">
+                  Multi-Family & Apartment Communities
+                </h5>
+              </div>
             </div>
           </div>
           <div className="col">
-            <div className="p-3 grid">Industrial & Warehouse Facilities</div>
+            <div className="card">
+              <img src={Retail} className="card-img-top" alt="" />
+              <div className="card-body p-3 grid">
+                <h5 className="card-title">Commercial & Retail Properties </h5>
+              </div>
+            </div>
+          </div>
+          <div className="col">
+            <div className="card">
+              <img src={Hoa} className="card-img-top" alt="" />
+              <div className="card-body p-3 grid">
+                <h5 className="card-title">HOA & Condo Associations</h5>
+              </div>
+            </div>
+          </div>
+          <div className="col">
+            <div className="card">
+              <img src={PropertyManager} className="card-img-top" alt="" />
+              <div className="card-body p-3 grid">
+                <h5 className="card-title">Property Management Companies</h5>
+              </div>
+            </div>
+          </div>
+          <div className="col">
+            <div className="card">
+              <img src={SeniorLiving} className="card-img-top" alt="" />
+              <div className="card-body p-3 grid">
+                <h5 className="card-title">
+                  Senior Living & Assisted Living Communities
+                </h5>
+              </div>
+            </div>
+          </div>
+          <div className="col">
+            <div className="card">
+              <img src={Warehouse} className="card-img-top" alt="" />
+              <div className="card-body p-3 grid">
+                <h5 className="card-title">
+                 Industrial & Warehouse Facilities
+                </h5>
+              </div>
+            </div>
           </div>
         </div>
       </div>

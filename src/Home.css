@@ -9,11 +9,15 @@
     margin-bottom: 25px;
 }
 .grid{
-    border: 1px solid black; 
+    border: 1px solid rgb(178, 178, 179);; 
     padding: 10px; 
     box-sizing: border-box; 
     font-family: Copperplate;
     font-weight: bolder;
     font-size: 13pt;
     color: #7d393b;
+}
+.card-img-top{
+    height: 223.59px;
+    object-fit: cover;
 }
