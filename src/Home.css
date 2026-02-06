@@ -21,3 +21,8 @@
     height: 223.59px;
     object-fit: cover;
 }
+
+.container-grid{
+    padding-bottom: 12px;
+    padding-top: 12px;
+}

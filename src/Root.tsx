@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 const Root: React.FC = () => (
   <>
     <Navbar />
-    <main className="container mt-4">
+    <main className="container">
       <Outlet />
     </main>
   </>

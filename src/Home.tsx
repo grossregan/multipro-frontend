@@ -59,8 +59,8 @@ const Home = () => {
           </strong>
         </div>
       </div>
-      <div className="container-fluid text-center">
-        <div className="row row-cols-3 gx-5 gy-5">
+      <div className="container-fluid container-grid text-center">
+        <div className="row row-cols-3 gx-4 gy-5">
           <div className="col">
             {gridCard({
               industry: "Multi-Family & Apartment Communities",

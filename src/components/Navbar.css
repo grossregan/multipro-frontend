@@ -1,6 +1,6 @@
 .navbar {
   background-color: #7d393b;
-  padding: 1rem;
+  padding: 8px;
   display: flex;
   font-size: 24pt;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -21,3 +21,6 @@ nav .nav-link {
     font-size: 14pt;
 }
 
+nav{
+    padding: 0;
+}

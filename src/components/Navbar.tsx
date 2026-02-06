@@ -2,13 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
-// Using React.FC (Function Component) for TypeScript type safety
 const Navbar: React.FC = () => {
   return (
     <div className="container nav-container">
       <nav id="main-navbar" className="navbar fixed-top navbar-expand-lg mt-2">
         <div className="container-fluid">
-          {/* Changed 'root' to '/' for standard home routing */}
           <Link className="navbar-brand nav-item me-5" to="/">
             Multipro
           </Link>
