@@ -5,11 +5,9 @@ import PropertyManager from "./assets/propertyManager.webp";
 import SeniorLiving from "./assets/assistedLiving.webp";
 import Warehouse from "./assets/warehouse.webp";
 
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Carousel from "./components/Carousel";
-import MaintenancePage from "./MaintenancePage";
 import "./Home.css";
 
 
@@ -33,28 +31,16 @@ const Home = () => {
   return (
     <>
       <div>
-        <Router>
-          <Navbar />
-          <Routes>
-            {/* <Route path="/repairs" element={<Home />} /> */}
-            <Route path="/pm" element={<MaintenancePage />} />
-            {/* <Route path="/utmr" element={<Home />} />
-            <Route path="/tir" element={<Home />} />
-            <Route path="/caem" element={<Home />} />
-            <Route path="/ims" element={<Home />} /> */}
-          </Routes>
-          <Carousel />
-        </Router>
+        <Navbar />
+        <Carousel />
       </div>
       <div>
         <div className="container-fluid text-center t-size">
           <div className="row r-color">
             <div style={{ marginTop: "25px", marginBottom: "25px" }}>
-              <text>
                 Here at Multipro, we do it all! Everything from interim staffing
                 to unit turnovers. <br></br>
                 <strong>We are on your side!</strong>
-              </text>
             </div>
           </div>
         </div>
@@ -73,7 +59,7 @@ const Home = () => {
           </strong>
         </div>
       </div>
-      <div className="container text-center">
+      <div className="container-fluid text-center">
         <div className="row row-cols-3 gx-5 gy-5">
           <div className="col">
             {gridCard({

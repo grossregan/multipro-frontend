@@ -1,15 +1,18 @@
-//import { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
-const Navbar = () => {
+// Using React.FC (Function Component) for TypeScript type safety
+const Navbar: React.FC = () => {
   return (
     <div className="container nav-container">
-      <nav id="main navbar" className="navbar fixed-top navbar-expand-lg mt-2">
+      <nav id="main-navbar" className="navbar fixed-top navbar-expand-lg mt-2">
         <div className="container-fluid">
-          <Link className="navbar-brand nav-item me-5" to='root'>
+          {/* Changed 'root' to '/' for standard home routing */}
+          <Link className="navbar-brand nav-item me-5" to="/">
             Multipro
           </Link>
+          
           <button
             className="navbar-toggler toggler"
             type="button"
@@ -21,51 +24,68 @@ const Navbar = () => {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
+
           <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav ">
+            <ul className="navbar-nav">
               <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                {/* Keep <a> for the toggle since it doesn't navigate anywhere */}
+                <a 
+                  className="nav-link dropdown-toggle" 
+                  href="#" 
+                  role="button" 
+                  data-bs-toggle="dropdown" 
+                  aria-expanded="false"
+                >
                   Services
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <a className="dropdown-item" href="ims">
+                    <Link className="dropdown-item" to="/ims">
                       Interim Maintenance Staffing
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="repairs">Repairs</Link>
+                    <Link className="dropdown-item" to="/repairs">
+                      Repairs
+                    </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="pm">Preventative Maintenance</Link>
+                    <Link className="dropdown-item" to="/pm">
+                      Preventative Maintenance
+                    </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="#utmr">Unit Turns & Make-Readies</Link>
+                    <Link className="dropdown-item" to="/utmr">
+                      Unit Turns & Make-Readies
+                    </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="tir#">
+                    <Link className="dropdown-item" to="/tir">
                       Tenant Improvements & Renovations
                     </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="caem">
+                    <Link className="dropdown-item" to="/caem">
                       Common Area & Exterior Maintenance
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>
+              
               <li className="nav-item me-3">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to="/industries">
                   Industries
-                </a>
+                </Link>
               </li>
               <li className="nav-item me-3">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to="/about">
                   About
-                </a>
+                </Link>
               </li>
               <li className="nav-item me-3">
-                <a className="nav-link">FAQ</a>
+                <Link className="nav-link" to="/faq">
+                  FAQ
+                </Link>
               </li>
             </ul>
           </div>
