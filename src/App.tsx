@@ -1,8 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 
 import Root from "./Root";
-import Home from "./Home";
-import InterimStaff from "./interimStaff";
+import Home from "./fullPages/Home";
+import InterimStaff from "./fullPages/interimStaff";
+import PreventativeMaintenance from "./fullPages/PreventativeMaintenance";
 
 const routes = [
   {
@@ -16,6 +17,10 @@ const routes = [
       {
         path: "ims",
         element: <InterimStaff />,
+      },
+      {
+        path: "pm",
+        element: <PreventativeMaintenance />,
       },
     ],
   },

@@ -5,11 +5,9 @@ import PropertyManager from "./assets/propertyManager.webp";
 import SeniorLiving from "./assets/assistedLiving.webp";
 import Warehouse from "./assets/warehouse.webp";
 
-
-import Navbar from "./components/Navbar";
-import Carousel from "./components/Carousel";
+import Navbar from "../components/Navbar";
+import Carousel from "../components/Carousel";
 import "./Home.css";
-
 
 interface CardDetails {
   industry: string;
@@ -38,9 +36,9 @@ const Home = () => {
         <div className="container-fluid text-center t-size">
           <div className="row r-color">
             <div style={{ marginTop: "25px", marginBottom: "25px" }}>
-                Here at Multipro, we do it all! Everything from interim staffing
-                to unit turnovers. <br></br>
-                <strong>We are on your side!</strong>
+              Here at Multipro, we do it all! Everything from interim staffing
+              to unit turnovers. <br></br>
+              <strong>We are on your side!</strong>
             </div>
           </div>
         </div>
