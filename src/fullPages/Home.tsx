@@ -1,11 +1,10 @@
-import Apartment from "./assets/apartment.jpeg";
-import Retail from "./assets/retail.webp";
-import Hoa from "./assets/hoaHomes.webp";
-import PropertyManager from "./assets/propertyManager.webp";
-import SeniorLiving from "./assets/assistedLiving.webp";
-import Warehouse from "./assets/warehouse.webp";
+import Apartment from "../assets/apartment.jpeg";
+import Retail from "../assets/retail.webp";
+import Hoa from "../assets/hoaHomes.webp";
+import PropertyManager from "../assets/propertyManager.webp";
+import SeniorLiving from "../assets/assistedLiving.webp";
+import Warehouse from "../assets/warehouse.webp";
 
-import Navbar from "../components/Navbar";
 import Carousel from "../components/Carousel";
 import "./Home.css";
 
@@ -28,10 +27,7 @@ function gridCard(details: CardDetails) {
 const Home = () => {
   return (
     <>
-      <div>
-        <Navbar />
-        <Carousel />
-      </div>
+      <Carousel />
       <div>
         <div className="container-fluid text-center t-size">
           <div className="row r-color">

@@ -1,8 +1,9 @@
-
 const PreventativeMaintenance = () => {
   return (
-    <div>MaintenancePage</div>
-  )
-}
+    <>
+      <div>MaintenancePage</div>
+    </>
+  );
+};
 
-export default PreventativeMaintenance
+export default PreventativeMaintenance;
