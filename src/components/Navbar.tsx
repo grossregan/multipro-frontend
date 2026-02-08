@@ -26,7 +26,6 @@ const Navbar: React.FC = () => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item dropdown">
-                {/* Keep <a> for the toggle since it doesn't navigate anywhere */}
                 <a 
                   className="nav-link dropdown-toggle" 
                   href="#" 

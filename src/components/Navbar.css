@@ -23,4 +23,18 @@ nav .nav-link {
 
 nav{
     padding: 0;
+    color: white;
+}
+
+.dropdown-menu{
+    background-color: #7d393b;
+}
+
+.dropdown-item{
+    color: white;
+}
+
+.dropdown-item:hover{
+    background-color: #7d393b;
+    color:black;
 }
