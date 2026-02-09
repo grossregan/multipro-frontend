@@ -47,16 +47,6 @@ const Navbar: React.FC = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link className="dropdown-item" to="/repairs">
-                      Repairs
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="/utmr">
-                      Unit Turns & Make-Readies
-                    </Link>
-                  </li>
-                  <li>
                     <Link className="dropdown-item" to="/tir">
                       Tenant Improvements & Renovations
                     </Link>
