@@ -11,6 +11,11 @@
 
 }
 
+.navbar-collapse {
+    background-color: #7d393b;
+    padding-left: 8px;
+}
+
 nav .navbar-brand {
     color: white;
     font-size: 24pt;

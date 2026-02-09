@@ -1,16 +1,16 @@
-import InterimStaff from "../assets/interimStaff.jpg"
+import InterimStaff from "../assets/interimStaff.jpg";
+import PageHeader from "../components/PageHeader";
 
 export const interimStaff: React.FC = () => {
   return (
-    <>
-   <div className="container-fluid" style={{height: "90px"}}></div>
-    <img src={InterimStaff}  className="rounded mx-auto d-block" alt="" />
-      <div className="text-center">
-        Short-staffed or need temporary help? We provide trained, reliable
-        maintenance technicians to support your onsite team—whether for a few
-        days or several months.
-      </div>
-    </>
+    <div>
+      {PageHeader({
+        pageName: "Interim Staff",
+        serviceDescription:
+          "Short-staffed or need temporary help? We provide trained, reliable maintenance technicians to support your onsite team—whether for afew days or several months.",
+        imgSrc: InterimStaff,
+      })}
+    </div>
   );
 };
 
