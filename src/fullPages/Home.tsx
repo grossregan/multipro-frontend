@@ -29,8 +29,14 @@ const Home = () => {
     <>
       <Carousel />
       <div>
-        <div className="container-fluid text-center" style={{fontSize:"15pt"}}>
-          <div className="row" style={{backgroundColor: "rgb(202, 202, 202)"}}>
+        <div
+          className="container-fluid text-center"
+          style={{ fontSize: "15pt" }}
+        >
+          <div
+            className="row"
+            style={{ backgroundColor: "rgb(202, 202, 202)" }}
+          >
             <div style={{ marginTop: "25px", marginBottom: "25px" }}>
               Here at Multipro, we do it all! Everything from interim staffing
               to unit turnovers. <br></br>
