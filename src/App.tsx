@@ -17,19 +17,19 @@ const routes = [
         element: <Home />,
       },
       {
-        path: "ims",
+        path: "services/ims",
         element: <InterimStaff />,
       },
       {
-        path: "pm",
+        path: "services/pm",
         element: <PreventativeMaintenance />,
       },
       {
-        path: "caem",
+        path: "services/caem",
         element: <CommonArea />,
       },
       {
-        path: "tir",
+        path: "services/tir",
         element: <TenantIR />,
       },
     ],

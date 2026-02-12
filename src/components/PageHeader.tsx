@@ -16,7 +16,6 @@ function PageHeader(data: pageData) {
           <p className="fs-5">{data.serviceDescription}</p>
         </div>
       </div>
-      <img src={data.imgSrc} className="rounded mx-auto d-block" alt="" />
     </>
   );
 }
