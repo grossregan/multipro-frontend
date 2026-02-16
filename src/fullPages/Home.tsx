@@ -59,7 +59,7 @@ const Home = () => {
           </strong>
         </div>
       </div>
-      <div className="container-fluid container-grid text-center">
+      <div className="container-fluid text-center">
         <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 gx-4 gy-5">
           <div className="col">
             {gridCard({

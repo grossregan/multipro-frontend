@@ -25,38 +25,10 @@ const Navbar: React.FC = () => {
 
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
-              <li className="nav-item dropdown">
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
+              <li className="nav-item me-3">
+                <Link className="nav-link" to="/services">
                   Services
-                </a>
-                <ul className="dropdown-menu">
-                  <li>
-                    <Link className="dropdown-item" to="/services/ims">
-                      Interim Maintenance Staffing
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="/services/pm">
-                      Preventative Maintenance
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="/services/tir">
-                      Tenant Improvements & Renovations
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" to="/services/caem">
-                      Common Area & Exterior Maintenance
-                    </Link>
-                  </li>
-                </ul>
+                </Link>
               </li>
 
               <li className="nav-item me-3">
