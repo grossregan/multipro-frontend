@@ -5,24 +5,9 @@ import PropertyManager from "../assets/propertyManager.webp";
 import SeniorLiving from "../assets/assistedLiving.webp";
 import Warehouse from "../assets/warehouse.webp";
 
+import IndustryCard from "../components/IndustryCard";
 import Carousel from "../components/Carousel";
 import "./Home.css";
-
-interface CardDetails {
-  industry: string;
-  img: string;
-}
-
-function gridCard(details: CardDetails) {
-  return (
-    <div className="card">
-      <img src={details.img} className="card-img-top" alt="" />
-      <div className="card-body p-3 grid">
-        <h5 className="card-title">{details.industry}</h5>
-      </div>
-    </div>
-  );
-}
 
 const Home = () => {
   return (
@@ -62,34 +47,43 @@ const Home = () => {
       <div className="container-fluid text-center">
         <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 gx-4 gy-5">
           <div className="col">
-            {gridCard({
+            {IndustryCard({
+              homeGrid: true,
               industry: "Multi-Family & Apartment Communities",
               img: Apartment,
             })}
           </div>
           <div className="col">
-            {gridCard({
+            {IndustryCard({
+              homeGrid: true,
               industry: "Commercial & Retail Properties",
               img: Retail,
             })}
           </div>
           <div className="col">
-            {gridCard({ industry: "HOA & Condo Associations", img: Hoa })}
+            {IndustryCard({
+              homeGrid: true,
+              industry: "HOA & Condo Associations",
+              img: Hoa,
+            })}
           </div>
           <div className="col">
-            {gridCard({
+            {IndustryCard({
+              homeGrid: true,
               industry: "Property Management Companies",
               img: PropertyManager,
             })}
           </div>
           <div className="col">
-            {gridCard({
+            {IndustryCard({
+              homeGrid: true,
               industry: "Senior Living & Assisted Living Communities",
               img: SeniorLiving,
             })}
           </div>
           <div className="col">
-            {gridCard({
+            {IndustryCard({
+              homeGrid: true,
               industry: "Industrial & Warehouse Facilities",
               img: Warehouse,
             })}
