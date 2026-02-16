@@ -25,6 +25,8 @@ const Industries = () => {
               homeGrid: false,
               industry: "Multi-Family & Apartment Communities",
               img: Apartment,
+              description:
+                "Daily work orders, unit turns, preventative maintenance, and project support to keep your buildings operating efficiently and residents satisfied.",
             })}
           </div>
           <div className="col">
@@ -32,6 +34,8 @@ const Industries = () => {
               homeGrid: false,
               industry: "Commercial & Retail Properties",
               img: Retail,
+              description:
+                "Reliable facility maintenance, repairs, and tenant improvements designed to keep businesses operating without interruption.",
             })}
           </div>
           <div className="col">
@@ -39,6 +43,8 @@ const Industries = () => {
               homeGrid: false,
               industry: "HOA & Condo Associations",
               img: Hoa,
+              description:
+                "We partner with homeowner associations to maintain common areas, perform building repairs, and handle seasonal and scheduled maintenance needs.",
             })}
           </div>
           <div className="col">
@@ -46,6 +52,8 @@ const Industries = () => {
               homeGrid: false,
               industry: "Property Management Companies",
               img: PropertyManager,
+              description:
+                "Comprehensive support across your entire portfolio, including staffing, work order management, and project execution.",
             })}
           </div>
           <div className="col">
@@ -53,6 +61,8 @@ const Industries = () => {
               homeGrid: false,
               industry: "Senior Living & Assisted Living Communities",
               img: SeniorLiving,
+              description:
+                "Professional, respectful maintenance services to support safe, compliant, and comfortable environments.",
             })}
           </div>
           <div className="col">
@@ -60,6 +70,8 @@ const Industries = () => {
               homeGrid: false,
               industry: "Industrial & Warehouse Facilities",
               img: Warehouse,
+              description:
+                "General building maintenance, lighting repairs, plumbing, and safety-related services for industrial and logistics properties.",
             })}
           </div>
         </div>
