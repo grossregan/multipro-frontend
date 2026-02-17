@@ -14,7 +14,7 @@ function IndustryCard(details: CardDetails) {
       <div className="card-body p-3 grid">
         <h5 className="card-title">{details.industry}</h5>
         {details.description && details.description.trim() !== "" ? (
-          <p className="card-text fw-lighter">{details.description}</p>
+          <p className="card-text">{details.description}</p>
         ) : null}
       </div>
     </div>
@@ -24,7 +24,7 @@ function IndustryCard(details: CardDetails) {
       <div className="card-body p-3">
         <h5 className="card-title">{details.industry}</h5>
         {details.description && details.description.trim() !== "" ? (
-          <p className="card-text fw-lighter">{details.description}</p>
+          <p className="card-text">{details.description}</p>
         ) : null}
       </div>
     </div>
