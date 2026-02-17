@@ -1,7 +1,6 @@
 interface pageData {
   pageName: string;
   serviceDescription: string;
-  imgSrc?: string;
 }
 
 function PageHeader(data: pageData) {

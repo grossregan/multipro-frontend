@@ -7,6 +7,7 @@ import Warehouse from "../assets/warehouse.webp";
 
 import PageHeader from "../components/PageHeader";
 import IndustryCard from "../components/IndustryCard";
+import Footer from "../components/Footer";
 
 const Industries = () => {
   return (
@@ -18,8 +19,8 @@ const Industries = () => {
             "Multipro Maintenance Solutions proudly supports a diverse range of property types and organizations. Our team understands the unique needs and expectations of each industry, ensuring consistent, high-quality service every time.",
         })}
       </div>
-      <div className="container-fluid container-grid text-center">
-        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 gx-4 gy-5">
+      <div className="container-fluid text-center">
+        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 gx-4 gy-5 container-grid">
           <div className="col">
             {IndustryCard({
               homeGrid: false,
@@ -75,6 +76,9 @@ const Industries = () => {
             })}
           </div>
         </div>
+      </div>
+      <div>
+        <Footer />
       </div>
     </>
   );

@@ -8,6 +8,7 @@ import Warehouse from "../assets/warehouse.webp";
 import IndustryCard from "../components/IndustryCard";
 import Carousel from "../components/Carousel";
 import "./Home.css";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -45,7 +46,7 @@ const Home = () => {
         </div>
       </div>
       <div className="container-fluid text-center">
-        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 gx-4 gy-5">
+        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 gx-4 gy-5" style={{marginBottom:"30px"}}>
           <div className="col">
             {IndustryCard({
               homeGrid: true,
@@ -89,6 +90,9 @@ const Home = () => {
             })}
           </div>
         </div>
+      </div>
+      <div>
+        <Footer />
       </div>
     </>
   );

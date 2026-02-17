@@ -7,6 +7,7 @@ import tenantImprovement from "../assets/tir.jpg";
 import commonArea from "../assets/commonArea.avif";
 
 import "./Services.css";
+import Footer from "../components/Footer";
 
 const Services = () => {
   return (
@@ -18,8 +19,8 @@ const Services = () => {
             "We offer plenty of servies here at Multipro, whether it be interim staff or just some light maintenance work, we've got you covered!",
         })}
       </div>
-      <div className="container-fluid service-grid container-grid text-center">
-        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 gy-5">
+      <div className="container-fluid service-grid text-center">
+        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 gy-5 container-grid">
           <div className="col">
             {IndustryCard({
               homeGrid: false,
@@ -57,6 +58,9 @@ const Services = () => {
             })}
           </div>
         </div>
+      </div>
+      <div>
+        <Footer />
       </div>
     </>
   );
