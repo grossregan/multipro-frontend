@@ -46,7 +46,10 @@ const Home = () => {
         </div>
       </div>
       <div className="container-fluid text-center">
-        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 gx-4 gy-5" style={{marginBottom:"30px"}}>
+        <div
+          className="row row-cols-1 row-cols-sm-2 row-cols-md-3 gx-4 gy-5"
+          style={{ marginBottom: "30px" }}
+        >
           <div className="col">
             {IndustryCard({
               homeGrid: true,
