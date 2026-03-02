@@ -56,8 +56,8 @@ const Footer = () => {
               <button type="button" className="btn btn-outline-primary">Submit</button>
             </div>
           </div>
-                </div>
         </div>
+      </div>
     </>
   );
 };

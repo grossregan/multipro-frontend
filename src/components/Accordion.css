@@ -1,0 +1,15 @@
+.accordion-button:not(.collapsed),
+.accordion-button:focus {
+    background-color: #F1C6C9 !important;
+    color: inherit;
+    box-shadow: none;
+}
+
+.accordion-button.collapsed {
+    background-color: white !important;
+}
+
+strong{
+    font-size: 14pt;
+    letter-spacing: 1%;
+}
