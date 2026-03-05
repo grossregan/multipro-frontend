@@ -15,12 +15,6 @@ const FAQ = () => {
       </div>
       <div className="accordion" id="FAQaccordion">
         {Accordion({
-          question: "What services does Multipro Maintenance provide?",
-          description:
-            "We offer full-service property maintenance and interior renovation support, including unit turns, general maintenance, painting, drywall, plumbing, and cleaning.",
-          numberAsString: "One",
-        })}
-        {Accordion({
           question: "Who do you typically work with?",
           description:
             "We partner with property managers, multifamily properties, commercial buildings, and owners who need reliable, responsive maintenance support.",
