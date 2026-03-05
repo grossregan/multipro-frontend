@@ -1,11 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
 
 import Root from "./Root";
-import Home from "./fullPages/Home";
-import Services from "./fullPages/Services";
-import About from "./fullPages/About";
-import Industries from "./fullPages/Industries";
-import FAQ from "./fullPages/FAQ";
+import Home from "./pages/Home";
+import Services from "./pages/Services";
+import About from "./pages/About";
+import Industries from "./pages/Industries";
+import FAQ from "./pages/FAQ";
 
 const routes = [
   {
