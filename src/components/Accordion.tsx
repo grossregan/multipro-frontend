@@ -2,7 +2,7 @@ import './Accordion.css'
 
 interface accordionDetails {
     question: string
-    description: string
+    answer: string
     numberAsString: string
 }
 function Accordion(data: accordionDetails){
@@ -26,7 +26,7 @@ function Accordion(data: accordionDetails){
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body">
-              {data.description}
+              {data.answer}
             </div>
           </div>
         </div>
