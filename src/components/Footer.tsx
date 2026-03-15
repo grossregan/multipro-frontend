@@ -1,6 +1,76 @@
-import './Footer.css';
+import React, { useState, FormEvent, ChangeEvent } from "react";
+import "./Footer.css";
 
-const Footer = () => {
+interface FormErrors {
+  firstName?: string;
+  lastName?: string;
+  email?: string;
+  message?: string;
+}
+
+const Footer: React.FC = () => {
+  const [firstName, setFirstName] = useState<string>("");
+  const [lastName, setLastName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
+  const [status, setStatus] = useState<string>("");
+  const [errors, setErrors] = useState<FormErrors>({});
+
+  const validate = (): FormErrors => {
+    const errs: FormErrors = {};
+    if (!firstName.trim()) errs.firstName = "First name required";
+    if (!lastName.trim()) errs.lastName = "Last name required";
+    if (!email.trim()) {
+      errs.email = "Email required";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      errs.email = "Invalid email address";
+    }
+    if (!message.trim()) errs.message = "Message required";
+    return errs;
+  };
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log("handleSubmit triggered");
+    setStatus("");
+    const errs = validate();
+    setErrors(errs);
+    if (Object.keys(errs).length > 0) return;
+
+    try {
+      const res = await fetch("http://localhost:5050/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: `${firstName} ${lastName}`.trim(),
+          email,
+          message,
+        }),
+      });
+      const data = await res.json();
+      if (res.ok) {
+        setStatus("Message sent!");
+        setFirstName("");
+        setLastName("");
+        setEmail("");
+        setMessage("");
+        setErrors({});
+      } else if (data.errors) {
+        setStatus("Please fix the errors and try again.");
+        const apiErrs: FormErrors = {};
+        data.errors.forEach((err: { param?: string; msg: string }) => {
+          if (err.param && err.param in apiErrs)
+            apiErrs[err.param as keyof FormErrors] = err.msg;
+        });
+        setErrors(apiErrs);
+      } else {
+        setStatus("Failed to send message. Please try again later.");
+      }
+    } catch (err) {
+      setStatus("Server error. Please try again later.");
+    }
+  };
+
   return (
     <>
       <div
@@ -11,9 +81,9 @@ const Footer = () => {
           color: "black",
         }}
       >
-        <div className='col offset-md-6'>
+        <div className="col offset-md-6">
           <h1 style={{ paddingTop: "10px" }}>Contact Us!</h1>
-          <div className="my-auto">
+          <form className="my-auto" onSubmit={handleSubmit} noValidate>
             <div className="row">
               <div className="col">
                 <input
@@ -21,7 +91,12 @@ const Footer = () => {
                   className="form-control"
                   placeholder="First name"
                   aria-label="First name"
+                  value={firstName}
+                  onChange={(e) => setFirstName(e.target.value)}
                 />
+                {errors.firstName && (
+                  <div className="text-danger small">{errors.firstName}</div>
+                )}
               </div>
               <div className="col">
                 <input
@@ -29,7 +104,12 @@ const Footer = () => {
                   className="form-control"
                   placeholder="Last name"
                   aria-label="Last name"
+                  value={lastName}
+                  onChange={(e) => setLastName(e.target.value)}
                 />
+                {errors.lastName && (
+                  <div className="text-danger small">{errors.lastName}</div>
+                )}
               </div>
             </div>
             <div className="row my-3">
@@ -39,7 +119,12 @@ const Footer = () => {
                   className="form-control"
                   placeholder="Email Address"
                   aria-label="Email Address"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
+                {errors.email && (
+                  <div className="text-danger small">{errors.email}</div>
+                )}
               </div>
             </div>
             <div className="row my-3">
@@ -49,13 +134,21 @@ const Footer = () => {
                   placeholder="Type your message here"
                   id="Message entry"
                   rows={6}
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                 />
+                {errors.message && (
+                  <div className="text-danger small">{errors.message}</div>
+                )}
               </div>
             </div>
             <div className="row my-3">
-              <button type="button" className="btn btn-outline-primary">Submit</button>
+              <button type="submit" className="btn btn-outline-primary">
+                Submit
+              </button>
             </div>
-          </div>
+            {status && <div className="my-2 text-info">{status}</div>}
+          </form>
         </div>
       </div>
     </>

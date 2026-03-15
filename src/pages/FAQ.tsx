@@ -2,7 +2,7 @@ import PageHeader from "../components/PageHeader";
 import Accordion from "../components/Accordion";
 import Footer from "../components/Footer";
 
-//Accordion variables question, description, numberAsString
+//Accordion variables question, answer, numberAsString
 
 const FAQ = () => {
   return (
