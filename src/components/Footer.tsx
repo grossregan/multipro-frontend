@@ -1,4 +1,5 @@
-import React, { useState, FormEvent, ChangeEvent } from "react";
+import React, { useState, FormEvent } from "react";
+
 import "./Footer.css";
 
 interface FormErrors {
@@ -67,7 +68,7 @@ const Footer: React.FC = () => {
         setStatus("Failed to send message. Please try again later.");
       }
     } catch (err) {
-      setStatus("Server error. Please try again later.");
+      setStatus("Server error. Please try again later." + err);
     }
   };
 
