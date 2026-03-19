@@ -1,5 +1,6 @@
 import Footer from "../components/Footer";
 import PageHeader from "../components/PageHeader";
+import Dan from "../assets/headshot.jpg";
 
 const About = () => {
   return (
@@ -16,38 +17,36 @@ const About = () => {
           As the owner of Multipro Maintenance, my goal has always been simple —
           to build a company that clients can truly rely on, not just another
           vendor you call when something breaks.
-        <br />
+          <br />
           We approach every property as if it were our own. That means taking
           pride in the details, doing the job right the first time, and never
           cutting corners. I believe that when you trust someone with your
           property, you deserve honesty, consistency, and results you can count
           on.
         </p>
-        <p>
-          At Multipro, our core values guide everything we do:
-          <ul>
-            <li>
-              <strong>Accountability</strong> – We take ownership of our work
-              and follow through on every commitment.
-            </li>
-            <li>
-              <strong>Integrity</strong> – We operate with honesty and
-              transparency in every interaction.
-            </li>
-            <li>
-              <strong>Communication</strong> – We keep you informed every step
-              of the way — no surprises.
-            </li>
-            <li>
-              <strong>Quality Workmanship </strong>– We focus on doing things
-              right, not just getting them done.
-            </li>
-            <li>
-              <strong>Urgency </strong>– We understand that time matters and
-              respond quickly to keep your operations running smoothly.
-            </li>
-          </ul>
-        </p>
+        <p>At Multipro, our core values guide everything we do:</p>
+        <ul>
+          <li>
+            <strong>Accountability</strong> – We take ownership of our work and
+            follow through on every commitment.
+          </li>
+          <li>
+            <strong>Integrity</strong> – We operate with honesty and
+            transparency in every interaction.
+          </li>
+          <li>
+            <strong>Communication</strong> – We keep you informed every step of
+            the way — no surprises.
+          </li>
+          <li>
+            <strong>Quality Workmanship </strong>– We focus on doing things
+            right, not just getting them done.
+          </li>
+          <li>
+            <strong>Urgency </strong>– We understand that time matters and
+            respond quickly to keep your operations running smoothly.
+          </li>
+        </ul>
         <p>
           We know that property maintenance isn’t just about fixing problems —
           it’s about keeping your residents satisfied, protecting your
@@ -56,6 +55,12 @@ const About = () => {
           <br />
           My team and I are committed to being a true partner you can depend on.
         </p>
+        <img
+          src={Dan}
+          className="rounded-circle mx-auto d-block"
+          alt="Dan Rodich"
+          style={{width:"427px", height:"640px"}}
+        />
       </div>
       <Footer />
     </>

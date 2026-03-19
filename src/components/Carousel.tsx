@@ -1,4 +1,4 @@
-import Commercial from "../assets/commercialBuilding.webp";
+import Commercial from "../assets/commercialBuilding.jpg";
 import Neighborhood from "../assets/neighborhood.jpg";
 import LoadingBay from "../assets/loadingBay.webp";
 import "./Carousel.css";
