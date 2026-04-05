@@ -1,3 +1,22 @@
+.container-flex.about-columns {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.about-left {
+  flex: 2 1 0;
+  min-width: 0;
+}
+
+.about-right {
+  flex: 1 1 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
 @font-face {
   font-family: 'north-rock';
   src: url("./assets/fonts/north-rock-font/NorthRockBold-gw8y5.otf") format('truetype');
