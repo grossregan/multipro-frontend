@@ -1,14 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
+import Brand from "../assets/MMS_Horizontal.png"
+
 
 const Navbar: React.FC = () => {
   return (
     <div className="container nav-container">
-      <nav id="main-navbar" className="navbar fixed-top navbar-expand-lg mt-2">
+      <nav id="main-navbar" className="navbar fixed-top navbar-expand-lg mt-2" style={{fontFamily: "north-rock"}}>
         <div className="container-fluid">
-          <Link className="navbar-brand nav-item me-5" to="/">
-            Multipro
+          <Link className="navbar-brand nav-item me-3" to="/">
+            <img src={Brand} alt="Multipro logo" height={48} style={{marginLeft:"10px"}}/>
           </Link>
 
           <button
