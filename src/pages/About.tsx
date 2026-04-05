@@ -13,7 +13,7 @@ const About = () => {
         })}
       </div>
       <div className="container-flex about-columns m-3">
-        <div className="about-left">
+        <div className="about-left" style={{fontSize: "14pt"}}>
           <p>
             As the owner of Multipro Maintenance, my goal has always been simple
             — to build a company that clients can truly rely on, not just

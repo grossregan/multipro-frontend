@@ -3,7 +3,10 @@ import Neighborhood from "../assets/neighborhood.jpg";
 import LoadingBay from "../assets/loadingBay.webp";
 import "./Carousel.css";
 
+
 const Carousel = () => {
+  const caption = "Proudly serving the greater Twin Cities area";
+
   return (
     <div
       id="mainCarousel"
@@ -17,7 +20,7 @@ const Carousel = () => {
           <div className="carousel-caption top-0 mt-4 d-none d-md-block caption">
             <h1 className="display-1 mt-5 fs-16 fw-bolder">Multipro</h1>
             <p className="text-capitalize">
-              Some representative placeholder content for the first slide.
+              {caption}
             </p>
           </div>
         </div>
@@ -26,7 +29,7 @@ const Carousel = () => {
           <div className="carousel-caption top-0 mt-4 d-none d-md-block caption">
             <h1 className="display-1 mt-5 fs-16 fw-bolder">Multipro</h1>
             <p className="text-capitalize">
-              Some representative placeholder content for the Second slide.
+              {caption}
             </p>
           </div>
         </div>
@@ -35,7 +38,7 @@ const Carousel = () => {
           <div className="carousel-caption top-0 mt-4 d-none d-md-block caption">
             <h1 className="display-1 mt-5 fs-16 fw-bolder">Multipro</h1>
             <p className="text-capitalize">
-              Some representative placeholder content for the Third slide.
+              {caption}
             </p>
           </div>
         </div>
