@@ -6,3 +6,7 @@
 .btn-outline-primary:hover{
     background-color: #8b222a;
 }
+
+a {
+    color: black;
+}
