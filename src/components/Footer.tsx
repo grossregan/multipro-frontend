@@ -7,17 +7,17 @@ const Footer = () => {
   return (
     <>
       <div
-        className="container-fluid d-flex align-items-center"
+        className="container-fluid d-flex"
         style={{
           height: "auto",
           backgroundColor: "#a6a6a6",
           color: "black",
         }}
       >
-        <div className="col">
+        <div className="col p-2">
           <div className="container-fluid">
-            <h4 className="text-center">Site Map</h4>
-            <ul>
+            <h3 className="text-center" style={{paddingTop:"10px"}}>Site Map</h3>
+            <ul >
               <Link to="/"><li>Home</li></Link>
               <Link to="/services"><li>Services</li></Link>
               <Link to="/industries"><li>Industries</li></Link>

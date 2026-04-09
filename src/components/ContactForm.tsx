@@ -72,8 +72,8 @@ const ContactForm: React.FC = () => {
 
   return (
     <>
-      <h1 style={{ paddingTop: "10px" }}>Contact Us!</h1>
-      <form className="my-auto" onSubmit={handleSubmit} noValidate>
+      <h3 style={{ paddingTop: "10px" }}>Contact Us!</h3>
+      <form className="my-auto p-2" onSubmit={handleSubmit} noValidate>
         <div className="row">
           <div className="col">
             <input
