@@ -7,7 +7,7 @@ import Brand from "../assets/MMS_Horizontal.png"
 const Navbar: React.FC = () => {
   return (
     <div className="container nav-container">
-      <nav id="main-navbar" className="navbar fixed-top navbar-expand-lg mt-2" style={{fontFamily: "north-rock"}}>
+      <nav id="main-navbar" className="navbar fixed-top navbar-expand-lg mt-2">
         <div className="container-fluid">
           <Link className="navbar-brand nav-item" to="/">
             <img src={Brand} alt="Multipro logo" height={48}/>
