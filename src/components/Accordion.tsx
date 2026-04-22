@@ -1,36 +1,26 @@
 import './Accordion.css'
+import {AccordionBody, AccordionItem, AccordionHeader, AccordionCollapse } from 'react-bootstrap'
 
 interface accordionDetails {
     question: string
     answer: string
     numberAsString: string
 }
-function Accordion(data: accordionDetails){
+function accordion(data: accordionDetails){
   return (
-   <div className="accordion-item" style={{padding: "5px"}}>
-          <h2 className="accordion-header">
-            <button
-              className="accordion-button collapsed"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target={"#collapse" + data.numberAsString}
-              aria-expanded="false"
-              aria-controls={"#collapse" + data.numberAsString}
-            >
+   <AccordionItem eventKey={data.numberAsString} style={{padding: "5px"}}>
+          <AccordionHeader>
               <strong>{data.question}</strong>
-            </button>
-          </h2>
-          <div
-            id={"collapse" + data.numberAsString}
-            className="accordion-collapse collapse"
-            data-bs-parent="#accordionExample"
+          </AccordionHeader>
+          <AccordionCollapse
+          eventKey={data.numberAsString}
           >
-            <div className="accordion-body">
+            <AccordionBody>
               {data.answer}
-            </div>
-          </div>
-        </div>
+            </AccordionBody>
+          </AccordionCollapse>
+        </AccordionItem>
   )
 }
 
-export default Accordion
+export default accordion
