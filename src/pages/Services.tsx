@@ -23,7 +23,6 @@ const Services = () => {
         <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 gy-5 container-grid">
           <div className="col">
             {IndustryCard({
-              homeGrid: false,
               industry: "Interim Maintenance Staff",
               img: interimStaff,
               description:
@@ -32,7 +31,6 @@ const Services = () => {
           </div>
           <div className="col">
             {IndustryCard({
-              homeGrid: false,
               industry: "Tenant Improvements & Repairs",
               img: tenantImprovement,
               description:
@@ -41,7 +39,6 @@ const Services = () => {
           </div>
           <div className="col">
             {IndustryCard({
-              homeGrid: false,
               industry: "Preventative Maintenance",
               img: preventativeMaintenance,
               description:
@@ -50,7 +47,6 @@ const Services = () => {
           </div>
           <div className="col">
             {IndustryCard({
-              homeGrid: false,
               industry: "Common Area & Exterior Maintenance",
               img: commonArea,
               description:
