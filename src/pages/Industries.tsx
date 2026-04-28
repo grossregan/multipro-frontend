@@ -23,7 +23,6 @@ const Industries = () => {
         <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 gx-4 gy-5 container-grid">
           <div className="col">
             {IndustryCard({
-              homeGrid: false,
               industry: "Multi-Family & Apartment Communities",
               img: Apartment,
               description:
@@ -32,7 +31,6 @@ const Industries = () => {
           </div>
           <div className="col">
             {IndustryCard({
-              homeGrid: false,
               industry: "Commercial & Retail Properties",
               img: Retail,
               description:
@@ -41,7 +39,6 @@ const Industries = () => {
           </div>
           <div className="col">
             {IndustryCard({
-              homeGrid: false,
               industry: "HOA & Condo Associations",
               img: Hoa,
               description:
@@ -50,7 +47,6 @@ const Industries = () => {
           </div>
           <div className="col">
             {IndustryCard({
-              homeGrid: false,
               industry: "Property Management Companies",
               img: PropertyManager,
               description:
@@ -59,7 +55,6 @@ const Industries = () => {
           </div>
           <div className="col">
             {IndustryCard({
-              homeGrid: false,
               industry: "Senior Living & Assisted Living Communities",
               img: SeniorLiving,
               description:
@@ -68,7 +63,6 @@ const Industries = () => {
           </div>
           <div className="col">
             {IndustryCard({
-              homeGrid: false,
               industry: "Industrial & Warehouse Facilities",
               img: Warehouse,
               description:
