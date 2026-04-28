@@ -1,6 +1,7 @@
 import Commercial from "../assets/commercialBuilding.jpg";
 import Neighborhood from "../assets/neighborhood.jpg";
 import LoadingBay from "../assets/loadingBay.webp";
+import Multipro from "../assets/MMS_Horizontal.png"
 import "./Carousel.css";
 
 

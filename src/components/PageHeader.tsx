@@ -8,7 +8,7 @@ function PageHeader(data: pageData) {
     <>
       <div
         className="container-fluid text-center d-flex align-items-center flex-column"
-        style={{ height: "700px", backgroundColor: "#d9d9d9" }}
+        style={{ height: "550px", backgroundColor: "#d9d9d9" }}
       >
         <div className="m-auto">
           <h1 className="fw-bolder fs-1">{data.pageName}</h1>

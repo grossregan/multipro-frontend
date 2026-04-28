@@ -1,3 +1,14 @@
+.grid{
+    border: 1px solid rgb(178, 178, 179);; 
+    padding: 10px; 
+    box-sizing: border-box; 
+    font-family: Copperplate;
+    font-weight: bolder;
+    font-size: 13pt;
+    color: #7d393b;
+}
+
+
 .container-flex.about-columns {
   display: flex;
   flex-direction: row;

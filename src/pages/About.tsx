@@ -61,7 +61,7 @@ const About = () => {
         <div className="about-right">
           <img
             src={Dan}
-            className="rounded-circle mx-auto d-block"
+            className="rounded mx-auto d-block"
             alt="Dan Rodich"
             style={{ width: "320px", height: "480px", objectFit: "cover" }}
           />
