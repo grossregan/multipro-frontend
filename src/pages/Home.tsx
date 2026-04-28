@@ -6,14 +6,14 @@ import SeniorLiving from "../assets/assistedLiving.webp";
 import Warehouse from "../assets/warehouse.webp";
 
 import IndustryCard from "../components/IndustryCard";
-import Carousel from "../components/Carousel";
+import MultiproCarousel from "../components/Carousel";
 import "./Home.css";
 import Footer from "../components/Footer";
 
 const Home = () => {
   return (
     <>
-      <Carousel />
+      <MultiproCarousel />
       <div>
         <div
           className="container-fluid text-center"
@@ -52,42 +52,36 @@ const Home = () => {
         >
           <div className="col">
             {IndustryCard({
-              homeGrid: true,
               industry: "Multi-Family & Apartment Communities",
               img: Apartment,
             })}
           </div>
           <div className="col">
             {IndustryCard({
-              homeGrid: true,
               industry: "Commercial & Retail Properties",
               img: Retail,
             })}
           </div>
           <div className="col">
             {IndustryCard({
-              homeGrid: true,
               industry: "HOA & Condo Associations",
               img: Hoa,
             })}
           </div>
           <div className="col">
             {IndustryCard({
-              homeGrid: true,
               industry: "Property Management Companies",
               img: PropertyManager,
             })}
           </div>
           <div className="col">
             {IndustryCard({
-              homeGrid: true,
               industry: "Senior Living & Assisted Living Communities",
               img: SeniorLiving,
             })}
           </div>
           <div className="col">
             {IndustryCard({
-              homeGrid: true,
               industry: "Industrial & Warehouse Facilities",
               img: Warehouse,
             })}
