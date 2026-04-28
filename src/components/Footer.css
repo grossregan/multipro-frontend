@@ -11,6 +11,7 @@ a.footer-center {
 }
 
 a {
-    color: black;
-    font-size: 18px;
+    color: rgb(75, 75, 75);
+    font-size: 16px;
+    font-weight: lighter;
 }

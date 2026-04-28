@@ -1,4 +1,5 @@
 import React, { useState, type FormEvent } from "react";
+import "./ContactForm.css";
 
 interface FormErrors {
   firstName?: string;
@@ -72,8 +73,16 @@ const ContactForm: React.FC = () => {
 
   return (
     <>
-      <h3 style={{ textAlign:"center", paddingTop: "10px" }}>Contact Us!</h3>
-      <form className="my-auto p-2" onSubmit={handleSubmit} noValidate>
+      <h4
+        style={{ textAlign: "center", paddingTop: "6px", fontSize: "1.1rem" }}
+      >
+        Contact Us!
+      </h4>
+      <form
+        className="contact-form-small my-auto p-1"
+        onSubmit={handleSubmit}
+        noValidate
+      >
         <div className="row">
           <div className="col">
             <input
