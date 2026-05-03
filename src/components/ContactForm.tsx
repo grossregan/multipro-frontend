@@ -44,7 +44,7 @@ const ContactForm: React.FC = () => {
       const payload = { name: `${firstName} ${lastName}`.trim(), email: email, message: message };
       const res =  await sendContact(payload);
       
-        if (res.ok || res.message == "Email sent successfully") {
+        if (res.ok /*|| res.message == "Email sent successfully"*/) {
         setStatus("Message sent!");
         setFirstName("");
         setLastName("");
