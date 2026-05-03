@@ -1,4 +1,6 @@
 import React, { useState, type FormEvent } from "react";
+import { sendContact } from "../services/api";
+
 import "./ContactForm.css";
 
 interface FormErrors {
@@ -25,7 +27,7 @@ const ContactForm: React.FC = () => {
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       errs.email = "Invalid email address";
     }
-    if (!message.trim()) errs.message = "Message required";
+    if (!message.trim()) errs.message = "Message is required";
     return errs;
   };
 
@@ -37,28 +39,22 @@ const ContactForm: React.FC = () => {
     setErrors(errs);
     if (Object.keys(errs).length > 0) return;
 
+
     try {
-      const res = await fetch("http://localhost:5050/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: `${firstName} ${lastName}`.trim(),
-          email,
-          message,
-        }),
-      });
-      const data = await res.json();
-      if (res.ok) {
+      const payload = { name: `${firstName} ${lastName}`.trim(), email: email, message: message };
+      const res =  await sendContact(payload);
+      
+        if (res.ok) {
         setStatus("Message sent!");
         setFirstName("");
         setLastName("");
         setEmail("");
         setMessage("");
         setErrors({});
-      } else if (data.errors) {
+      } else if (res.errors) {
         setStatus("Please fix the errors and try again.");
         const apiErrs: FormErrors = {};
-        data.errors.forEach((err: { param?: string; msg: string }) => {
+        res.errors.forEach((err: { param?: string; msg: string }) => {
           if (err.param && err.param in apiErrs)
             apiErrs[err.param as keyof FormErrors] = err.msg;
         });
@@ -146,7 +142,7 @@ const ContactForm: React.FC = () => {
             Submit
           </button>
         </div>
-        {status && <div className="my-2 text-info">{status}</div>}
+        {status && <div className="my-2 text-info" style={{color:"red"}}>{status}</div>}
       </form>
     </>
   );
