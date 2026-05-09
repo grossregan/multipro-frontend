@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Navbar as BootstrapNavbar, Nav } from "react-bootstrap";
 import "./Navbar.css";
 import Brand from "../assets/MMS_Horizontal.png"
 
@@ -7,11 +8,11 @@ import Brand from "../assets/MMS_Horizontal.png"
 const Navbar: React.FC = () => {
   return (
     <div className="container nav-container">
-      <nav id="main-navbar" className="navbar fixed-top navbar-expand-lg mt-2">
+      <BootstrapNavbar id="main-navbar" className="navbar fixed-top navbar-expand-lg mt-2">
         <div className="container-fluid">
-          <Link className="navbar-brand nav-item" to="/">
+          <BootstrapNavbar.Brand as={Link} className="navbar-brand nav-item" to="/">
             <img src={Brand} alt="Multipro logo" height={48}/>
-          </Link>
+          </BootstrapNavbar.Brand>
 
           <button
             className="navbar-toggler toggler"
@@ -25,33 +26,33 @@ const Navbar: React.FC = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
 
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav">
-              <li className="nav-item me-3">
+          <BootstrapNavbar.Collapse className="collapse navbar-collapse" id="navbarNav">
+            <Nav className="navbar-nav">
+              <Nav.Item className="nav-item me-3">
                 <Link className="nav-link" to="/services">
                   Services
                 </Link>
-              </li>
+              </Nav.Item>
 
-              <li className="nav-item me-3">
+              <Nav.Item className="nav-item me-3">
                 <Link className="nav-link" to="/industries">
                   Industries
                 </Link>
-              </li>
-              <li className="nav-item me-3">
+              </Nav.Item>
+              <Nav.Item className="nav-item me-3">
                 <Link className="nav-link" to="/about">
                   About
                 </Link>
-              </li>
-              <li className="nav-item me-3">
+              </Nav.Item>
+              <Nav.Item className="nav-item me-3">
                 <Link className="nav-link" to="/faq">
                   FAQ
                 </Link>
-              </li>
-            </ul>
-          </div>
+              </Nav.Item>
+            </Nav>
+          </BootstrapNavbar.Collapse>
         </div>
-      </nav>
+      </BootstrapNavbar>
     </div>
   );
 };
