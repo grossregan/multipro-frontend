@@ -16,7 +16,7 @@ const Footer = () => {
           color: "rgb(75, 75, 75)",
         }}
       >
-        <div className="row pt-1 p-4 mx-auto">
+        <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 pt-1 p-4 mx-auto">
           <div className="col my-auto p-4">
             <div
               className="vstack text-center gap-3"
@@ -50,7 +50,7 @@ const Footer = () => {
           </div>
           <div className="w-100" />
           <div className="col">
-            <img alt="RENET Logo" src={Renet} style={{ width: "50%", alignSelf:"center"}} />
+            <img alt="RENET Logo" src={Renet} style={{padding:"5px", width: "50%", alignSelf:"center"}} />
           </div>
           <div className="col pb-2 text-center footer-center">
             <p style={{fontSize:"10pt"}}>
