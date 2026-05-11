@@ -20,7 +20,7 @@ const Services = () => {
         })}
       </div>
       <div className="container-fluid service-grid text-center">
-        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 gy-5 container-grid">
+        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 gx-4 gy-5 container-grid">
           <div className="col">
             {IndustryCard({
               industry: "Interim Maintenance Staff",
